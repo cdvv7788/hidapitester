@@ -37,3 +37,9 @@ jobs:
       - name: run hidapitester
         shell: bash
         run: ./hidapitester --version && ./hidapitester --list
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hidapitester.ext
+          path: hidapitesterwait.exe
